@@ -57,6 +57,21 @@ namespace Skyhop.Igc.Tests
             Assert.True(igcFile.Task.NumTurnpoints == 4);
             Assert.True(igcFile.Task.Points.Count == 8);
             Assert.True(igcFile.Task.TaskNumber == 2);
+            Assert.True(igcFile.GeoDatum == "WGS-1984");
+        }
+        
+        [Fact]
+        public void ParseFile_FAI_Sporting_Code_2021_3_4()
+        {
+            var file = Common.ReadFile("FAI_Sporting_Code_2021_3_4.igc");
+            var igcFile = Parser.Parse(file);
+
+            Assert.True(igcFile.Copilot == "NIL");
+            Assert.True(igcFile.GliderType == "NKN");
+            Assert.True(igcFile.Date == "2016-08-16");
+            Assert.True(igcFile.GeoDatum == "WGS84");
+            Assert.True(igcFile.GeoDatumAlgorithm == "GEO");
+            Assert.True(igcFile.GeoPressureAlgorithm == "ISA");
         }
     }
 }

@@ -18,6 +18,9 @@ namespace Skyhop.Igc
         public string LoggerType { get; set; }
         public string FirmwareVersion { get; set; }
         public string HardwareVersion { get; set; }
+        public string GeoDatum { get; set; }
+        public string GeoDatumAlgorithm { get; set; }
+        public string GeoPressureAlgorithm { get; set; }
 
         public Task Task { get; set; }
         public List<BRecord> Fixes { get; set; } = new List<BRecord>();

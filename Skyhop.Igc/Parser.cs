@@ -157,6 +157,15 @@ namespace Skyhop.Igc
                 case "RHW":
                     _result.HardwareVersion = _parseHardwareVersion(line);
                     break;
+                case "DTM":
+                    _result.GeoDatum = _parseGeoDatum(line);
+                    break;
+                case "ALG":
+                    _result.GeoDatumAlgorithm = _parseGeoDatumAlgorithm(line);
+                    break;
+                case "ALP":
+                    _result.GeoPressureAlgorithm = _parseGeoPressureAlgorithm(line);
+                    break;
             }
         }
 
@@ -272,6 +281,18 @@ namespace Skyhop.Igc
 
         private string _parseHardwareVersion(string line) {
             return _parseTextHeader("RHW", Constants.RE_RHW_HEADER, line);
+        }
+
+        private string _parseGeoDatum(string line) {
+            return _parseTextHeader("DTM", Constants.RE_DTM_HEADER, line);
+        }
+
+        private string _parseGeoDatumAlgorithm(string line) {
+            return _parseTextHeader("ALG", Constants.RE_ALG_HEADER, line);
+        }
+
+        private string _parseGeoPressureAlgorithm(string line) {
+            return _parseTextHeader("ALP", Constants.RE_ALP_HEADER, line);
         }
 
         private void _processTaskLine(string line)

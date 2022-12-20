@@ -16,6 +16,9 @@ namespace Skyhop.Igc
         internal const string RE_FTY_HEADER = @"^H[FOP]FTY(?:.{0,}?:(.*)|(.*))$";
         internal const string RE_RFW_HEADER = @"^H[FOP]RFW(?:.{0,}?:(.*)|(.*))$";
         internal const string RE_RHW_HEADER = @"^H[FOP]RHW(?:.{0,}?:(.*)|(.*))$";
+        internal const string RE_DTM_HEADER = @"^H[FOP]DTM(?:.{0,}?:(.*)|(.*))$";
+        internal const string RE_ALG_HEADER = @"^H[FOP]ALGALTGPS(?:.{0,}?:(.*)|(.*))$";
+        internal const string RE_ALP_HEADER = @"^H[FOP]ALPALTPRE(?:.{0,}?:(.*)|(.*))$";
         internal const string RE_B = @"^B(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(\d{3})([NS])(\d{3})(\d{2})(\d{3})([EW])([AV])(-\d{4}|\d{5})(-\d{4}|\d{5})";
         internal const string RE_K = @"^K(\d{2})(\d{2})(\d{2})";
         internal const string RE_IJ = @"^[IJ](\d{2})(?:\d{2}\d{2}[A-Z]{3})+";
